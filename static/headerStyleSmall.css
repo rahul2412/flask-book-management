@@ -1,0 +1,19 @@
+.main-nav {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+.header-img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.main-title {
+  display: block;
+  text-align: center;
+}
+.header-icon {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}

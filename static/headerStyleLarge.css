@@ -1,0 +1,12 @@
+.main-nav {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+}
+.header-img {
+  display: inline-block;
+  vertical-align: middle;
+}
+.main-title {
+  display: inline-block;
+}

@@ -1,0 +1,62 @@
+div {
+  padding: 20px;
+}
+
+footer {
+  width: 100%;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.header-img {
+  width: 250px;
+  height: 250px;
+  margin: 5px;
+}
+
+.main-title {
+  padding: 10px;
+}
+
+.main-nav {
+  padding: 10px;
+}
+
+.list {}
+
+.list-item {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.genre-pic {
+  height: 200px;
+  width: 200px;
+}
+
+.item-link {
+  font-size: 18px;
+}
+
+.small {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  vertical-align: middle;
+}
+
+.big {
+  width: 100px;
+  height: 100px;
+}
+
+.book-cover {
+  height: 400px;
+  width: 300px;
+  margin: 10px;
+}
+
+.para {
+  width: 70%;
+  margin: 5px auto 5px auto;
+}

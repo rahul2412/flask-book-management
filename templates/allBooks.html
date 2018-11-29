@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content%}
+
+  <h2>
+    <img class="small" src={{genre.icon}} alt={{genre.name}}>
+    {{genre.name}}
+  </h2>
+
+  <ol class="list">
+    {% for book in books %}
+    <li class="list-item">
+      <a class="item-link" href="{{url_for('showBook', book_id=book.id)}}">
+      <img class="book-cover" src="{{book.cover}}" alt="{{book.name}}">
+      <br>
+      {{book.name}} </a>
+      <br>
+      {{book.author}}
+    </li>
+    {% endfor %}
+  </ol>
+
+{% endblock %}

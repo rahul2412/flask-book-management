@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content%}
+
+  <h2> Add a new book </h2>
+  <form name="createBook" action="#" method="post">
+
+    <label> Title: </label>
+    <input name="name"
+           class="form-control form-control-lg"
+           maxlength="64"
+           type="text"
+           required>
+    <br>
+
+    <label> Author: </label>
+    <input name="author"
+           class="form-control"
+           maxlength="64"
+           type="text"
+           required>
+    <br>
+
+    <label> Cover Image URL: </label>
+    <input name="cover"
+           class="form-control"
+           type="url"
+           required>
+    <br>
+
+    <label> Ebook link: </label>
+    <input name="link"
+           class="form-control"
+           type="url"
+           required>
+    <br>
+
+    <label> Genre: </label><br>
+    <input name="genre" type="radio" value="1"> Fantasy <br>
+    <input name="genre" type="radio" value="2"> Science Fiction <br>
+    <input name="genre" type="radio" value="3" checked> Classics <br>
+    <input name="genre" type="radio" value="4"> Humor <br>
+    <input name="genre" type="radio" value="5"> Mystery <br>
+    <input name="genre" type="radio" value="6"> Biography <br>
+    <input name="genre" type="radio" value="7"> Self Help <br>
+    <br>
+
+    <label> Description: </label>
+    <br>
+    <textarea name="description"
+          maxlength="1020"
+          class="form-control"
+          rows="5"></textarea>
+    <br>
+
+    <div class="row">
+      <div class="col-sm">
+    <button class="btn btn-block btn-secondary" type="button" onclick="location.href='/'"> Cancel </button>
+      </div>
+      <div class="col-sm">
+    <button class="btn btn-block btn-primary" type="submit"> Submit </button>
+      </div>
+    </div>
+
+  </form>
+{% endblock %}

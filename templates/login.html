@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!--LOAD PRE-REQUISITES FOR GOOGLE SIGN IN -->
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js">
+  </script>
+  <script src="//apis.google.com/js/platform.js?onload=start"> </script>
+  <!-- END PRE-REQUISITES FOR GOOGLE SIGN IN -->
+  <style>
+    .main-nav {
+      display: none;
+    }
+  </style>
+  <title>Catalog</title>  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+  <link rel=stylesheet media="screen and (min-width: 800px)" type=text/css href="{{ url_for('static', filename='headerStyleLarge.css') }}">
+  <link rel=stylesheet media="screen and (max-width: 799px)" type=text/css href="{{ url_for('static', filename='headerStyleSmall.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+
+<body>
+  {% include "header.html" %}
+  <!-- GOOGLE PLUS SIGN IN-->
+
+    <div id="signinButton"  class="text-center">
+      <h2> Login to this catalog using Google </h2>
+      <p class="para"> Sign in to be able to create, update and delete your entries in this catalog </p>
+      <br>
+      <span class="g-signin"
+            data-scope="openid email"
+            data-clientid="321837888942-uare3uvfr6000v39ne7iam47t1031flu.apps.googleusercontent.com"
+            data-redirecturi="postmessage"
+            data-accesstype="offline"
+            data-cookiepolicy="single_host_origin"
+            data-callback="signInCallback"
+            data-approvalprompt="force">
+      </span>
+    </div>
+
+  <div id="result"  class="text-center"></div>
+
+  <script>
+  function signInCallback(authResult) {
+    if (authResult['code']) {
+      // Hide the sign-in button now that the user is authorized
+      $('#signinButton').attr('style', 'display: none');
+      // Send the one-time-use code to the server, if the server responds, write a 'login successful' message to the web page and then redirect back to the main restaurants page
+      $.ajax({
+        type: 'POST',
+        url: '/gconnect?state={{STATE}}',
+        processData: false,
+        data: authResult['code'],
+        contentType: 'application/octet-stream; charset=utf-8',
+        success: function(result) {
+          // Handle or verify the server response if necessary.
+          if (result) {
+            $('#result').html(result + '</br>Redirecting...')
+           setTimeout(function() {
+            window.location.href = "/";
+           }, 4000);
+
+        } else if (authResult['error']) {
+      console.log('There was an error: ' + authResult['error']);
+    } else {
+          $('#result').html('Failed to make a server-side call. Check your configuration and console.');
+           }
+        }
+
+    }); } }
+  </script>
+
+  <!--END GOOGLE PLUS SIGN IN -->
+  {% include "footer.html" %}
+
+</body>
+
+</html>

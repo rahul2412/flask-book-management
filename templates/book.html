@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content%}
+
+  <h2> {{ book.name }} </h2>
+  <br>
+  <b> Author: </b> {{ book.author }}
+  <br>
+  <b> Genre: </b> {{ genre.name }}
+  <br>
+  <p class="para">
+  <b> Description: </b> {{ book.description }}<br>
+  <b> Ebook link: </b> <a href="{{book.link}}">{{book.name}}</a>
+  </p>
+  <img class="book-cover" src="{{book.cover}}" alt="{{book.name}}" width=200px height=300px>
+  <br>
+  Added by :
+  <img class="small icon" src="{{creator.picture}}" alt="{{creator.name}}" width=50px height=50px>
+  {{creator.name}}
+  <br>
+  <br>
+  {% if (isCreator) %}
+  <a class="btn btn-block btn-primary" href="/book/{{book.id}}/edit/"> Edit this book </a>
+  <br>
+  <a class="btn btn-block btn-danger" href="/book/{{book.id}}/delete/"> Delete this book </a>
+  {% endif %}
+
+{% endblock %}

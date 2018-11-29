@@ -1,0 +1,95 @@
+{% extends "base.html" %}
+{% block content%}
+
+  <h2> Add a new book </h2>
+  <form name="updateBook" action="#" method="post">
+
+    <label> Title: </label>
+    <input name="name"
+           class="form-control form-control-lg"
+           maxlength="64"
+           type="text"
+           value="{{book.name}}"
+           required>
+    <br>
+
+    <label> Author: </label>
+    <input name="author"
+           maxlength="64"
+           class="form-control"
+           type="text"
+           value="{{book.author}}"
+           required>
+    <br>
+
+    <label> Cover Image URL: </label>
+    <input name="cover"
+           class="form-control"
+           type="url"
+           value="{{book.cover}}"
+           required>
+    <br>
+
+    <label> Ebook link: </label>
+    <input name="link"
+           class="form-control"
+           type="url"
+           value="{{book.link}}"
+           required>
+    <br>
+
+    <label> Genre: </label>
+    <br>
+    <input name="genre"
+           type="radio"
+           value="1"
+            {% if (genre.id==1) %} checked {% endif %}> Fantasy <br>
+    <input name="genre"
+           type="radio"
+           value="2"
+            {% if (genre.id==2) %} checked {% endif %}> Science Fiction <br>
+    <input name="genre"
+           type="radio"
+           value="3"
+           {% if (genre.id==3) %} checked {% endif %}> Classics <br>
+    <input name="genre"
+           type="radio"
+           value="4"
+           {% if (genre.id==4) %} checked {% endif %}> Humor <br>
+    <input name="genre"
+           type="radio"
+           value="5"
+           {% if (genre.id==5) %} checked {% endif %}> Mystery <br>
+    <input name="genre"
+           type="radio"
+           value="6"
+            {% if (genre.id==6) %} checked {% endif %}> Biography <br>
+    <input name="genre"
+           type="radio"
+           value="7"
+            {% if (genre.id==7) %} checked {% endif %}> Self Help <br>
+    <br>
+
+    <label> Description: </label>
+    <br>
+    <textarea name="description"
+          class="form-control"
+          maxlength="1020"
+          rows="5">{{book.description}}</textarea>
+    <br>
+
+    <div class="row">
+      <div class="col-sm">
+    <button class="btn btn-block btn-secondary" type="button" onclick="location.href='/book/{{book.id}}'"> Cancel </button>
+      </div>
+      <div class="col-sm">
+    <button class="btn btn-block btn-secondary" type="reset"> Reset </button>
+      </div>
+      <div class="col-sm">
+    <button class="btn btn-block btn-primary" type="submit"> Update </button>
+      </div>
+    </div>
+
+  </form>
+
+{% endblock %}

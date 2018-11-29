@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<title>Catalog</title>  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+  <link rel=stylesheet media="screen and (min-width: 800px)" type=text/css href="{{ url_for('static', filename='headerStyleLarge.css') }}">
+  <link rel=stylesheet media="screen and (max-width: 799px)" type=text/css href="{{ url_for('static', filename='headerStyleSmall.css') }}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+</head>
+<body background="https://cdn.hipwallpaper.com/i/81/64/LeZSUg.jpg">
+
+{% include "header.html" %}
+
+<div class="text-justify text-center">
+{% block content %}
+{% endblock %}
+</div>
+
+{% include "footer.html" %}
+
+</body>
+</html>

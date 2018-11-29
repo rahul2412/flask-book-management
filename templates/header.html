@@ -1,0 +1,22 @@
+<header style="background-color: black">
+  
+  <center>
+  <a href="{{url_for('showAllGenres')}}">
+  <h1 class="main-title"> A Catalog of Books </h1>
+  <!--<img src="https://images-na.ssl-images-amazon.com/images/I/51uO1pQc5oL._SX329_BO1,204,203,200_.jpg"
+       class="header-img"
+       alt="Books image">-->
+  </a>
+</center>
+  <nav class="main-nav">
+    {% if (private) %}
+    <img class="header-icon small" src="{{picture}}" alt="logged in">
+    <br>
+    <a class="btn btn-success btn-block" href="{{url_for('addBook')}}"> Add a book </a>
+    <a class="btn btn-primary btn-block" href="{{url_for('gdisconnect')}}"> Logout </a>
+    {% else %}
+    <a class="btn btn-primary  btn-block" href="{{url_for('showLogin')}}"> Login </a>
+    {% endif %}
+  </nav>
+  <hr>
+</header>

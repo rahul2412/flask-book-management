@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block content%}
+
+  <h2> All Genres </h2>
+
+  <ul style="list-style-type: none;">
+    {% for genre in genres %}
+    <li style="display: inline-block;padding: 34px">
+      <a href="{{url_for('showGenreItems', genre_id=genre.id)}}">
+      <img class="genre-pic" src="{{genre.icon}}" alt="{{genre.name}}"><br>
+      {{genre.name}} </a>
+    </li>
+    {% endfor %}
+  </ul>
+
+{% endblock %}

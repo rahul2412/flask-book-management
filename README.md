@@ -8,3 +8,10 @@ It is not necessary to login in order to read the books, only to add or edit det
 - Flask
 - Python 2.7
 - SQLite database
+
+# Work Sample
+## Home Page-
+<img src="https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(262).png" alt="Home Page">
+
+## Home Page After Sign in
+<img src="https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(258).png" alt="Sign In">

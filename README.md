@@ -20,7 +20,7 @@ It is not necessary to login in order to read the books, only to add or edit det
 <img src="https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(258).png" alt="Sign In">
 
 ## C.R.U.D. Operations After Sign in
-<img src=https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(259).png" alt="CRUD">
+<img src="https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(259).png" alt="CRUD">
 
 
 

@@ -13,8 +13,10 @@ It is not necessary to login in order to read the books, only to add or edit det
 ## Home Page-
 <img src="https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(262).png" alt="Home Page">
 
+## Gmail Sign in
+<img src="https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(256).png" alt="gmail">
+
 ## Home Page After Sign in
 <img src="https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(258).png" alt="Sign In">
 
-## Gmail Sign in
-<img src="https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(256).png" alt="gmail">
+

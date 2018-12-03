@@ -24,6 +24,8 @@ It is not necessary to login in order to read the books, only to add or edit det
 ## C.R.U.D. operations post Sign in
 <img src="https://github.com/rahul2412/flask-book-management/blob/master/images/Screenshot%20(259).png" alt="C.R.U.D">
 <img src="https://github.com/rahul2412/flask-book-management/blob/master/images/ss1.PNG" alt="new book">
+## Different use (No CRUD ops)
+<img src="https://github.com/rahul2412/flask-book-management/blob/master/images/ss1.PNG" alt="diff user">
 
 
 
